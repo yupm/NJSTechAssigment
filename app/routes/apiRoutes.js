@@ -6,13 +6,18 @@ module.exports = function(app) {
         
     });
 
-    //Test 2: Set teachers
+    //Test 2: Add teachers
     app.post('/api/setteachers', async(req, res) => {
         res.send('US1!')
     });
 
+    //Function 3: Add Student
+    app.post('/api/setstudent', async(req, res) => {
+        res.send('US1!')
+    });
 
 
+    
     //User story 1
     app.post('/api/register', async(req, res) => {
         res.send('US1!')

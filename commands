@@ -8,6 +8,21 @@ npm install --save sequelize
 npm install mysql2 --save
 npm install -g sequelize-cli
 sequelize init
+
 sequelize model:create --name Teacher --attributes teacher_email:string
 sequelize model:create --name Registration --attributes teacher_email:string,student_email:string
 sequelize model:create --name Student --attributes student_email:string,suspended:boolean
+
+//Create database in MYSQL
+mysql -unodeuser -pgovtechnodejs -e "CREATE DATABASE edu_admin_db;"
+
+//Perform migrations
+sequelize db:migrate
+
+//Seed database
+sequelize seed:create --name demo-teachers
+sequelize seed:create --name demo-students
+sequelize seed:create --name demo-registrations
+
+//Edit the files. then seed db.
+sequelize db:seed:all
