@@ -4,7 +4,7 @@
   "description": "Tech Assessment for GovTech",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha test",
     "start": "node server.js"
   },
   "author": "",
@@ -13,6 +13,12 @@
     "express": "^4.17.1",
     "http": "0.0.1-security",
     "mysql2": "^2.1.0",
-    "sequelize": "^5.21.12"
+    "sequelize": "^5.21.12",
+    "superagent": "^5.2.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "request": "^2.88.2"
   }
 }

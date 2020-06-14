@@ -68,9 +68,8 @@ module.exports = function(app) {
         }
 
         //notify outcomes
-        
+        res.status(204).send({ 'Message' : "Students registered to teacher!" });
 
-        res.send('reg!')
     });
 
     //User Story 2
@@ -157,10 +156,13 @@ module.exports = function(app) {
 
         //extract recipients from notification 
         var reEmail = extractEmails(notification);
-        reEmail.forEach(element => {
-            checkNotifyList.push(element);
-        });
-        
+
+        if(reEmail){
+            reEmail.forEach(element => {
+                checkNotifyList.push(element);
+            }); 
+        }
+ 
         var uniqStudents = [...new Set(checkNotifyList)];
 
         let finalList = await Student
@@ -183,5 +185,9 @@ module.exports = function(app) {
 function extractEmails(text)
 {
     var rawRegex = text.match(/@([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi);
-    return rawRegex.map(e => e.slice(1));
+    if(rawRegex){
+        return rawRegex.map(e => e.slice(1));
+    }else{
+        return null;
+    }
 }

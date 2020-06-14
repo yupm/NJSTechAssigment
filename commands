@@ -26,3 +26,10 @@ sequelize seed:create --name demo-registrations
 
 //Edit the files. then seed db.
 sequelize db:seed:all
+
+
+//Install mocha
+npm install --global mocha
+
+
+npm install mocha chai request --save-dev
