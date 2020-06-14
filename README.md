@@ -1,8 +1,8 @@
-# NodeJS API Asessment
-NodeJS API Asessment for Techical Software Engineering Interview. 
+# NodeJS API Endpoints
+NodeJS API Endpoints a PT gateway.. 
 
 Your task is to:
-1. Develop a set of API endpoints, listed under *User Stories* below, for teachers to perform administrative functions for their classes.
+1. Develop a set of API endpoints, listed under *User Stories*.
     * Your code must be hosted on Github, or any other similar service, in a publicly-accessible repository.
     * You may assume that login and access control have already been handled.
 2. *(Optional)* Deploy your API to any publicly accessible hosting environment.
