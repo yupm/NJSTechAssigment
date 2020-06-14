@@ -1,7 +1,9 @@
 //server.js
 var express = require('express');
 const http = require('http');
+var bodyParser   = require('body-parser');
 var app = express();
+app.use(bodyParser.json()); // get information from html forms
 
 // routes ======================================================================
 require('./app/routes.js')(app); // load our routes and pass in our app
