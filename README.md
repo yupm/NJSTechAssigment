@@ -1,21 +1,15 @@
-# NodeJS API Endpoints
-NodeJS API Endpoints a PT gateway.. 
-
-Your task is to:
-1. Develop a set of API endpoints, listed under *User Stories*.
-    * Your code must be hosted on Github, or any other similar service, in a publicly-accessible repository.
-    * You may assume that login and access control have already been handled.
-2. *(Optional)* Deploy your API to any publicly accessible hosting environment.
+# NodeJS API Tech Trial 
+The goal of this assessment is to develop a set of endpoints for performing functions of a teacher-parent gateway.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 #### Global packages
 ```
-npm install -g sequelize-cli
-npm install --global mocha
+npm install sequelize-cli --global
+npm install mocha --global
 ```
 
 Please run npm install after cloning this repository.
@@ -28,13 +22,16 @@ npm install mysql2 --save
 npm install mocha --save-dev
 npm install chai --save-dev
 npm install request --save-dev
+npm install superagent --save-dev
 ```
 
 ### Installing
 
 #### Create database in MYSQL
+A database called edu_admin_db will be used by the application. 
+If another database is to be used, edit the details in the /config/config.json file.
 ```
-mysql -unodeuser -pgovtechnodejs -e "CREATE DATABASE edu_admin_db;"
+CREATE DATABASE edu_admin_db;
 ```
 
 #### Perform migrations
@@ -60,6 +57,7 @@ Run tests with:
 ```
 npm test
 ```
+![Unit tests for assessment](/images/tests.png?raw=true "Unit Testing")
 
 ## Deployment
 
