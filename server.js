@@ -12,6 +12,6 @@ require('./app/routes.js')(app); // load our routes and pass in our app
 const httpServer = http.createServer(app);
 
 httpServer.listen(8080, () => {
-	console.log('HTTP Server running on port 80');
+	console.log('HTTP Server running on port 8080');
 });
 
