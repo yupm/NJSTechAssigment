@@ -58,7 +58,9 @@ Run tests with:
 ```
 npm test
 ```
-![Unit tests for assessment](/images/tests.png?raw=true | width=680)
+<p align="center">
+  <img width="800" src="https://raw.githubusercontent.com/yupm/NJSTechAssigment/master/images/tests.png">
+</p>
 
 ## Deployment
 
